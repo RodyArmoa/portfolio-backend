@@ -37,7 +37,8 @@ public class DataLoader implements CommandLineRunner {
         webPortfolio.setTechnologies(List.of("Java", "Spring Boot", "SvelteKit", "Docker", "MySQL", "CI/CD"));
         webPortfolio.setGithubUrl("https://github.com/RodyArmoa/portfolio-backend");
         // Guardamos el proyecto en la base de datos
-        projectRepository.save(budgetManager);
+        // --- GUARDAR AMBOS PROYECTOS (LA CORRECCIÓN) ---
+        projectRepository.saveAll(List.of(budgetManager, webPortfolio));
 
         System.out.println(">>> Datos de prueba cargados en la base de datos! <<<");
     }
