@@ -29,6 +29,13 @@ public class DataLoader implements CommandLineRunner {
         budgetManager.setTechnologies(List.of("Java", "Spring Boot", "Svelte", "Electron", "SQLite", "OpenPDF"));
         budgetManager.setGithubUrl("https://github.com/RodyArmoa/app-gestor-presupuestos.git");
 
+
+        // --- PROYECTO 2: Tu Nuevo Proyecto (Este Porfolio) ---
+        Project webPortfolio = new Project();
+        webPortfolio.setName("Portfolio Personal Full-Stack");
+        webPortfolio.setDescription("Aplicación web completa para servir como porfolio personal, con un backend en Java/Spring Boot que expone una API REST y un frontend en SvelteKit que la consume. Desplegado en un ecosistema multi-nube (Render, Vercel, Railway).");
+        webPortfolio.setTechnologies(List.of("Java", "Spring Boot", "SvelteKit", "Docker", "MySQL", "CI/CD"));
+        webPortfolio.setGithubUrl("https://github.com/RodyArmoa/portfolio-backend");
         // Guardamos el proyecto en la base de datos
         projectRepository.save(budgetManager);
 
