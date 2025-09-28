@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://portfolio-frontend-alpha-weld.vercel.app")
 public class ProjectController {
 
     private final ProjectRepository projectRepository;
